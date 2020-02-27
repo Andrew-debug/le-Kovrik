@@ -1,0 +1,99 @@
+.intro {
+    width: 100%;
+    position: relative;
+    display: flex;
+	flex-direction: column; 
+	justify-content: center;
+    min-height: 850px;
+    background: url(../images/intro-background/bg.png) center no-repeat;
+    background-size: cover;
+    @media screen and (max-width: $breakpoint-mobile) {
+        height: 100vh;
+        min-height: unset;
+    }
+    @media screen and (max-height:414px) {
+        min-height: 20rem;
+    }
+    &__inner {
+        width: 100%;
+        max-width: 970px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__title {
+        font-family: $gordita-regular;
+        font-size: 2rem;
+        margin: 6rem 0;
+        text-shadow: 1px 1px 2px $black;
+        @media screen and (max-width: $breakpoint-tablet) {
+            margin: 4rem 1rem;
+        }
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 1rem;
+            margin: 2rem 1rem;
+        }
+        @media screen and (max-height:414px) {
+            font-size: 1.5rem;
+        }
+    }
+    &__button {
+        background-color: #03548E;
+        color: $white;
+
+        border: none;
+        border-radius: 85px;
+        cursor: pointer;
+        font-family: $gordita-regular;
+        font-size: 1.2rem;
+
+        padding: .8rem 4rem;
+        text-align: center;
+        line-height: 3.2rem;
+        @media screen and (max-width: $breakpoint-mobile) {
+            padding: .5rem 1.5rem;
+            font-size: .8rem;
+        }
+        @media screen and (max-height:414px) {
+            padding: .5rem 1.5rem;
+            font-size: .7rem;
+        }
+        &:hover {
+            background-color: lighten($introbtn, 5%);
+        }
+    }
+    &__forward {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: all .3s ease-in-out;
+        @media screen and (max-height:414px) {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover img {
+            opacity: 0;
+        }
+        &:hover .intro__hidden {
+            opacity: 1;
+        }
+    }
+    &__hidden {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+
+        text-align: center;
+        font-size: .6rem;
+        font-family: $gordita-regular;
+        transition: all .3s ease-in-out;
+
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $gordita-regular;
+    background: $background;
+    color: $white;
+}
+
+:root {
+    font-size: 20px;
+}
+
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+.up__button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: $white;
+    opacity: 0;
+    transition: opacity 1s;
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+
+}
+
+.active {
+    overflow: hidden;
+}

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="EVA Коврики для автомобилей с доставкой по всему Крыму | Собственное производство ковриков eva">
+    <meta name="keywords" content="коврики eva,
+          автомобильные коврики eva,
+          коврики eva официальный,
+          eva коврики официальный сайт,
+          коврик автомобильный,
+          автоковрик eva,
+          коврик автомобиль,
+          коврик авто,
+          коврик багажник,
+          коврик машина">
+    <meta itemprop="name" content="Автоковрики EVA">
+    <meta itemprop="description" content="EVA Коврики для автомобилей с доставкой по всему Крыму | Собственное производство ковриков eva">
+    <meta name="og:title" content="Автоковрики EVA">
+    <meta name="og:description" content="EVA Коврики для автомобилей с доставкой по всему Крыму | Собственное производство ковриков eva">
+    <meta name="og:image" content="http://evacraft.ru/images/main_slider_bg.jpg">
+    <meta name="og:url" content="http://evacraft.ru/">
+    <meta name="og:site_name" content="Автоковрики EVA">
+    <meta name="og:locale" content="ua_UA">
+    <meta name="og:video" content="https://youtu.be/MVllxXzJ9Wc">
+    <meta name="og:type" content="website">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>EvaMat</title>
+</head>
+<body>
+
+<!--header + main nav + social links-->
+<div id="header" class="header">
+    <div class="container">
+        <div class="header__inner">
+            <nav class="nav">
+
+                <div class="header__mobile">
+                    <a href="#">
+                        <img src="./images/logo/EvaCraft.png" alt="">
+                    </a>
+                </div>
+
+                <div class="nav__hamburger">
+                    <div class="nav__line"></div>
+                    <div class="nav__line"></div>
+                    <div class="nav__line"></div>
+                </div>
+
+                <div class="nav__bottom">
+                    <div class="nav__ref">
+                        <a id="myBtn2">
+                            <img src="./images/icons/phone.png" alt="">
+                            <p>Замовити</p>
+                        </a>
+                    </div>
+                    <div class="nav__ref">
+                        <a href="#about">
+                            <img src="./images/icons/order.png" alt="">
+                        </a>
+                        <p>Про нас</p>
+                    </div>
+                    <div class="nav__ref">
+                        <a href="#contacts">
+                            <img src="./images/icons/contacts.png" alt="">
+                        </a>
+                        <p>Контакти</p>
+                    </div>
+                </div>
+
+                <ul class="nav__links">
+                    <li class="nav__link"><a id="myBtn1">Замовити</a></li>
+                    <li class="nav__link"><a href="#about">Про нас</a></li>
+
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./images/logo/EvaCraft.png" alt="">
+                        </a>
+                    </div>
+
+                    <li class="nav__link"><a href="#video">Відео</a></li>
+                    <li class="nav__link"><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div> <!--/header-->
+
+<div class="intro">
+    <div class="intro__inner">
+        <h1 class="intro__title">Eva килими з полімеру на Ваш вибір</h1>
+        <a href="#about" class="intro__button">Дізнатися більше</a>
+    </div>
+
+    <a class="intro__forward" href="#slider">
+        <img src="./images/logo/ec.png" alt="">
+        <div class="intro__hidden">Move Forward</div>
+    </a>
+</div> 
+
+
+<div id="slider" class="carousel">
+    <a class="carousel-item"><img src="./images/slider/1.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/2.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/3.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/4.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/6.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/7.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/8.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/9.jpg"></a>
+</div>
+
+<!-- <div id="myModal1" class="modal1">
+
+    <span class="close1">&times;</span>
+  
+    <img class="modal-content1" id="img01" src="./images/slider/1.jpg">
+  
+</div> -->
+
+
+<div id="video" class="video">
+    <div class="video__wrap">
+        <div class="iframe-container">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/MVllxXzJ9Wc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<a id ="myBtn" class="button__submit">Замовити</a>
+
+<div id="myModal" class="window">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="wrapper">
+            <h1>Замовити дзвінок від спеціалста</h1>
+            <p>Для быстрого получения информации наберите</p>
+            <p>+79781200562</p>
+            <p>Если вы не спешите, то заполните заявку и мы свяжемся с вами в течение рабочего дня.</p>
+            <div id="error_message"></div>
+        
+            <form id="myform" class="contact-form" action="" method="post" onsubmit="return validation()">
+                <div class="input__field">
+                    <input name="name" type="text" placeholder="Name" id="name">
+                </div>
+                <div class="input__field">
+                    <input name="phone" type="text" placeholder="Phone" id="phone">
+                </div>
+                <div class="btn-submit">
+                    <input type="submit" name="submit">
+                </div>
+
+                <div class="select">
+                    <div class="select__wrapper">
+                        <div class="select__type">
+            
+                            <div class="tab">
+                                <button class="tablinks active" onclick="chooseColor(event, 'inner')">Колір килима</button>
+                                <button class="tablinks" onclick="chooseColor(event, 'edges')">Колір окантовки</button>
+                            </div>
+                            
+                            <div id="inner" class="tabcontent tabcontent-open">
+                                <div class="block-wrap">
+            
+                                    <div class="circle-wrap">
+                                        <span id="color1" class="circle color1"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color2" class="circle color2"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color3" class="circle color3"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color4" class="circle color4"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color5" class="circle color5"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color6" class="circle color6"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color7" class="circle color7"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color8" class="circle color8"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color9" class="circle color9"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color10" class="circle color10"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color11" class="circle color11"></span>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            
+                            <div id="edges" class="tabcontent">
+                                <div class="block-wrap">
+                                    <div class="circle-wrap">
+                                        <span id="color12" class="circle color1"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color13" class="circle color2"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color14" class="circle color3"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color15" class="circle color4"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color16" class="circle color5"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color17" class="circle color6"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color18" class="circle color7"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color19" class="circle color8"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color20" class="circle color9"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color21" class="circle color10"></span>
+                                    </div>
+            
+                                    <div class="circle-wrap">
+                                        <span id="color22" class="circle color11"></span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div> <!--/select type-->
+            
+                        <div class="select__selected">
+                            <div class="select__picture">
+                                <img class="select__edge" src="./images/carpet-select/edging/1.png" alt="">
+                                <img class="select__image" src="./images/carpet-select/mainColor/1.png" alt="">
+                            </div>
+                        </div>
+            
+                    </div> <!--select wrapper-->
+                </div>
+            </form>
+        </div> <!--wrapper-->
+
+    </div> <!--modal-content-->
+</div> <!--window-->
+
+
+
+<div id="about" class="about">
+    <div class="container">
+        <h1 class="about__title">Килими EVA CRAFT виготовляються із екополімеру ETHYLENE-VINYL ACETATE (EVA)</h1>
+
+        <div class="about__advantages">
+            <div class="about__why">
+                <img src="./images/about/why_icon.png" alt="">
+                <h1>Производитель</h1>
+                <p>Мы изготовим автоковрик индивидуально под Ваш автомобиль за 1-2 дня</p>
+            </div>
+            <div class="about__why">
+                <img src="./images/about/why_icon.png" alt="">
+                <h1>Лучшая цена</h1>
+                <p>Цена напрямую от производителя</p>
+            </div>
+            <div class="about__why">
+                <img src="./images/about/why_icon.png" alt="">
+                <h1>Оригинальный EVA</h1>
+                <p>Мы используем только качественный материал – Этиленвинилацетат заводской полимеризации</p>
+            </div>
+        </div>
+
+        <div class="about__row about__row--reverse">
+
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>  
+
+            <div class="about__text">
+                <h2>Blooger</h2>
+                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+            </div>
+        </div> <!-- about__row -->
+
+        <div class="about__row">
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>    
+
+            <div class="about__text">
+                <h2>Active Box</h2>
+                <p>This is my very first project. Was build with the help of a tutorial for beginners about building a website with HTML, CSS and jQuery. Very useful experience especially working with jQuery.</p>
+            </div>   
+        </div> <!-- about_row -->
+
+        <div class="about__row about__row--reverse">
+
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>  
+
+            <div class="about__text">
+                <h2>Blooger</h2>
+                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+            </div>
+        </div> <!-- about__row -->
+
+        <div class="about__row">
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>    
+
+            <div class="about__text">
+                <h2>Active Box</h2>
+                <p>This is my very first project. Was build with the help of a tutorial for beginners about building a website with HTML, CSS and jQuery. Very useful experience especially working with jQuery.</p>
+            </div>   
+        </div> <!-- about_row -->
+
+        <div class="about__row about__row--reverse">
+
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>  
+
+            <div class="about__text">
+                <h2>Blooger</h2>
+                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+            </div>
+        </div> <!-- about__row -->
+
+        <div class="about__row">
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>    
+
+            <div class="about__text">
+                <h2>Active Box</h2>
+                <p>This is my very first project. Was build with the help of a tutorial for beginners about building a website with HTML, CSS and jQuery. Very useful experience especially working with jQuery.</p>
+            </div>   
+        </div> <!-- about_row -->
+
+        <div class="about__row about__row--reverse">
+
+            <div class="about__image">
+                <a><img src="./images/slider/1.jpg" alt="Eva mat"></a>
+            </div>  
+
+            <div class="about__text">
+                <h2>Blooger</h2>
+                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+            </div>
+        </div> <!-- about__row -->
+
+    </div> <!--container-->
+</div> <!--about-->
+
+<div id="contacts" class="contacts">
+
+    <div class="contacts__map"></div>
+
+    <div class="container">
+        <div class="contacts__data">
+            <div class="contacts__info">
+                <h1>Контакти</h1>
+                <h2>EvaCraft килими для автомобілів на замовлення</h2>
+                <p>Адрес производства: РФ, г. Севастополь, ул. Вакуленчука д. 53/7</p>
+                <h2>Телефон:</h2>
+                <p>+7(978) 120-05-62</p>
+                <h2>Email:</h2>
+                <p>evacraft@gmail.com</p>
+            </div>
+            <div class="contacts__info">
+                <h1>Про нас</h1>
+                <h2>Дізнатися про нас більше можна за посиланнями нижче:</h2>
+                <div class="contacts__social">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="" target="_blank">
+                                <img src="./images/icons/telegram.png" alt="telegram">
+                            </a>
+                        </li>
+            
+                        <li class="social__item">
+                            <a href="" target="_blank">
+                                <img src="./images/icons/vkontakte.png" alt="vk">
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a href="" target="_blank">
+                                <img src="./images/icons/instagram.png" alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contacts__info">
+                <h1>Графік роботи</h1>
+                <div class="contacts__wrap">
+                    <div class="contacts__day">
+                        <h2>Понеділок</h2>
+                        <h2>Вівторок</h2>
+                        <h2>Середа</h2>
+                        <h2>Четвер</h2>
+                        <h2>П'ятниця</h2>
+                        <h2>Субота</h2>
+                        <h2>Неділя</h2>
+                    </div>
+                    <div class="contacts__time">
+                        <p>10:00 - 18:00</p>
+                        <p>10:00 - 18:00</p>
+                        <p>10:00 - 18:00</p>
+                        <p>10:00 - 18:00</p>
+                        <p>10:00 - 18:00</p>
+                        <p>10:00 - 18:00</p>
+                        <p>10:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="up-button" class="up__button" href="#"><i class="fas fa-arrow-up"></i></a>
+
+<footer class="footer">
+    <div class="footer__wrapper">
+        <ul class="social">
+            <li class="social__item">
+                <a href="" target="_blank">
+                    <img src="./images/icons/telegram.png" alt="telegram">
+                </a>
+            </li>
+
+            <li class="social__item">
+                <a href="" target="_top">
+                    <img src="./images/icons/gmail.png" alt="gmail">
+                </a>
+            </li>
+
+            <li class="social__item">
+                <a href="" target="_top">
+                    <img src="./images/icons/vkontakte.png" alt="vk">
+                </a>
+            </li>
+
+            <li class="social__item">
+                <a href="" target="_top">
+                    <img src="./images/icons/instagram.png" alt="instagram">
+                </a>
+            </li>
+        </ul>
+        <div class="copyright__wrapper">
+            <p>&copy; Made by le Andrew & le Timur</p>
+        </div>
+    </div>
+</footer> 
+
+
+<script src="./scripts/materialize.min.js"></script>
+<script src="../src/scripts/main.js"></script>
+<script src="https://kit.fontawesome.com/05e40f5d54.js" crossorigin="anonymous"></script>
+</body>
+</html>

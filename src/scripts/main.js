@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function chooseColor(evt, color) {
     var i, tabcontent, tablinks;
 
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tab__content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName("tab__links");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
@@ -140,9 +140,11 @@ let modal = document.getElementById('myModal');
 let btn = document.getElementById("myBtn");
 let btn1 = document.getElementById("myBtn1");
 let btn2 = document.getElementById("myBtn2");
+let closeBtn = document.getElementById('closeBtn');
+let closeBtn1 = document.getElementById('closeBtn1');
 
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the modal
+// let span = document.getElementsByClassName("close")[0];
 
 let body = document.querySelector('body');
 
@@ -160,44 +162,15 @@ btn2.onclick = function() {
     body.classList.toggle('active');
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+// // When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function() {
     modal.style.display = "none";
     body.classList.remove('active')
 }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        body.classList.remove('active')
-    }
+closeBtn1.onclick = function() {
+    modal.style.display = "none";
+    body.classList.remove('active')
 }
-
-
-function validation() {
-    let name = document.getElementById('name').value;
-    let phone = document.getElementById('phone').value;
-    let errorMessage = document.getElementById('error_message');
-
-    errorMessage.style.padding = '10px';
-
-    if(name.length < 2) {
-        text = 'Please, Enter Valid Name';
-        errorMessage.innerHTML = text;
-        return false;
-    }
-
-    if(isNaN(phone) || phone.length != 12) {
-        text = 'Please, Enter Valid Phone Number';
-        errorMessage.innerHTML = text;
-        return false;
-    }
-    return true;
-}
-
-
-
 
 window.addEventListener('scroll', () => {
     const sideNav = document.getElementById('up-button');
@@ -212,29 +185,35 @@ window.addEventListener('scroll', () => {
     }
 });
 
+function validation() {
+    let name = document.getElementById('name').value;
+    let phone = document.getElementById('phone').value;
+    let errorMessage = document.getElementById('error-message');
+    let successMessage = document.getElementById('success-message');
+    let sendBtn = document.getElementById('sendBtn');
+    let text;
 
+    errorMessage.style.padding = '10px';
 
+    if(name.length < 2) {
+        text = 'Please, Enter Valid Name';
+        errorMessage.innerHTML = text;
+        return false;
+    }
 
-
-// // Get the modal
-// var modal1 = document.getElementById('myModal1');
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img1 = document.getElementById('myImg1');
-// var modalImg1 = document.getElementById("img01");
-// img1.onclick = function(){
-//     modal1.style.display = "block";
-//     modalImg1.src = this.src;
-// }
-
-// // Get the <span> element that closes the modal
-// var span1 = document.getElementsByClassName("close1")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span1.onclick = function() {
-//   modal1.style.display = "none";
-// }
-
+    if(phone.length < 18) {
+        text = 'Please, Enter Valid Phone Number';
+        errorMessage.innerHTML = text;
+        return false;
+    }
+    sendBtn.onclick = function() {
+        text = 'Your request has been sent';
+        errorMessage.style.display = 'none';
+        successMessage.style.padding = '10px';
+        successMessage.innerHTML = text;
+        return true;
+    }
+}
 
 const myForm = document.getElementById('myform');
 myForm.addEventListener('submit', (e) => {
@@ -251,7 +230,7 @@ request.send(new FormData(myForm));
 
 
 let lastScrollTop = 0;
-    navbar = document.getElementById('header');
+navbar = document.getElementById('header');
 window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
@@ -261,3 +240,21 @@ window.addEventListener('scroll', () => {
     }
     lastScrollTop = scrollTop;
 })
+
+
+$(document).ready(function(){
+    $('#phone').mask('+38(000) 000 00 00');
+});
+
+
+
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("closed");
+  
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -21,7 +21,7 @@
     <meta name="og:image" content="http://evacraft.ru/images/main_slider_bg.jpg">
     <meta name="og:url" content="http://evacraft.ru/">
     <meta name="og:site_name" content="Автоковрики EVA">
-    <meta name="og:locale" content="ua_UA">
+    <meta name="og:locale" content="uk_UK">
     <meta name="og:video" content="https://youtu.be/MVllxXzJ9Wc">
     <meta name="og:type" content="website">
     <link rel="stylesheet" href="./styles/main.css">
@@ -111,14 +111,6 @@
     <a class="carousel-item"><img src="./images/slider/9.jpg"></a>
 </div>
 
-<!-- <div id="myModal1" class="modal1">
-
-    <span class="close1">&times;</span>
-  
-    <img class="modal-content1" id="img01" src="./images/slider/1.jpg">
-  
-</div> -->
-
 
 <div id="video" class="video">
     <div class="video__wrap">
@@ -128,154 +120,171 @@
     </div>
 </div>
 
-<a id ="myBtn" class="button__submit">Замовити</a>
+<button id="myBtn" class="button__submit">Login</button>
+  
+<div id="myModal" class="modal">
+    <div class="modal__content zoom">
 
-<div id="myModal" class="window">
-
-    <div class="modal-content">
-        <span class="close">&times;</span>
-
-        <div class="wrapper">
-            <h1>Замовити дзвінок від спеціалста</h1>
+        <div class="modal__center">
+            <span id="closeBtn1" title="Close Modal">&times;</span>
+            <h1>ЗАМОВИТИ ДЗВІНОК ВІД СПЕЦІАЛІСТА</h1>
             <p>Для быстрого получения информации наберите</p>
             <p>+79781200562</p>
             <p>Если вы не спешите, то заполните заявку и мы свяжемся с вами в течение рабочего дня.</p>
-            <div id="error_message"></div>
-        
-            <form id="myform" class="contact-form" action="" method="post" onsubmit="return validation()">
-                <div class="input__field">
-                    <input name="name" type="text" placeholder="Name" id="name">
-                </div>
-                <div class="input__field">
-                    <input name="phone" type="text" placeholder="Phone" id="phone">
-                </div>
-                <div class="btn-submit">
-                    <input type="submit" name="submit">
-                </div>
+        </div>
 
-                <div class="select">
-                    <div class="select__wrapper">
-                        <div class="select__type">
-            
-                            <div class="tab">
-                                <button class="tablinks active" onclick="chooseColor(event, 'inner')">Колір килима</button>
-                                <button class="tablinks" onclick="chooseColor(event, 'edges')">Колір окантовки</button>
+        <div id="error-message"></div>
+        <div id="success-message"></div>
+
+        <form id="myform" class="color-select" method="post" action="" onsubmit="return validation()">
+            <div class="modal__section">
+                <label>Ім'я</label>
+                <input id="name" class="modal__input" type="text" placeholder="Введіть Ваше ім'я" name="name" maxlength="40" required>
+                <label for=phone>Номер телефону</label>
+                <input id="phone" class="modal__input" placeholder="Введіть Ваш номер телефону">
+                <button id="sendBtn" class="submit" type="submit" name="submit">Відправити</button>
+                <div class="color-select__title">
+                    <p>Не обирати кольори</p>
+                    <input type="checkbox" id="myCheck" onclick="myFunction()">
+                </div>
+                <div class="color-section__wrap">
+                    <input type="checkbox" checked="checked"> 1
+                    <input type="checkbox" checked="checked"> 2
+                    <input type="checkbox" checked="checked"> 3
+                    <input type="checkbox" checked="checked"> 4
+                    <input type="checkbox" checked="checked"> 5
+                    <input type="checkbox" checked="checked"> 6
+                </div>
+            </div>
+        </form>
+
+        <div class="select">
+            <div id="closed"></div>
+            <div class="select__wrapper">
+                <div class="select__type">
+
+                    <div class="tab">
+                        <button class="tab__links tab__links--active" onclick="chooseColor(event, 'innerColor')">Колір килима</button>
+                        <button class="tab__links" onclick="chooseColor(event, 'edgesColor')">Колір окантовки</button>
+                    </div>
+                    
+                    <div id="innerColor" class="tab__content tab__content--open">
+                        <div class="block-wrap">
+
+                            <div class="circle-wrap">
+                                <span id="color1" class="circle color1"></span>
                             </div>
-                            
-                            <div id="inner" class="tabcontent tabcontent-open">
-                                <div class="block-wrap">
-            
-                                    <div class="circle-wrap">
-                                        <span id="color1" class="circle color1"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color2" class="circle color2"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color3" class="circle color3"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color4" class="circle color4"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color5" class="circle color5"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color6" class="circle color6"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color7" class="circle color7"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color8" class="circle color8"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color9" class="circle color9"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color10" class="circle color10"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color11" class="circle color11"></span>
-                                    </div>
-            
-                                </div>
+
+                            <div class="circle-wrap">
+                                <span id="color2" class="circle color2"></span>
                             </div>
-                            
-                            <div id="edges" class="tabcontent">
-                                <div class="block-wrap">
-                                    <div class="circle-wrap">
-                                        <span id="color12" class="circle color1"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color13" class="circle color2"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color14" class="circle color3"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color15" class="circle color4"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color16" class="circle color5"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color17" class="circle color6"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color18" class="circle color7"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color19" class="circle color8"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color20" class="circle color9"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color21" class="circle color10"></span>
-                                    </div>
-            
-                                    <div class="circle-wrap">
-                                        <span id="color22" class="circle color11"></span>
-                                    </div>
-                                </div>
+
+                            <div class="circle-wrap">
+                                <span id="color3" class="circle color3"></span>
                             </div>
-            
-                        </div> <!--/select type-->
-            
-                        <div class="select__selected">
-                            <div class="select__picture">
-                                <img class="select__edge" src="./images/carpet-select/edging/1.png" alt="">
-                                <img class="select__image" src="./images/carpet-select/mainColor/1.png" alt="">
+
+                            <div class="circle-wrap">
+                                <span id="color4" class="circle color4"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color5" class="circle color5"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color6" class="circle color6"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color7" class="circle color7"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color8" class="circle color8"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color9" class="circle color9"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color10" class="circle color10"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color11" class="circle color11"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div id="edgesColor" class="tab__content">
+                        <div class="block-wrap">
+                            <div class="circle-wrap">
+                                <span id="color12" class="circle color1"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color13" class="circle color2"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color14" class="circle color3"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color15" class="circle color4"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color16" class="circle color5"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color17" class="circle color6"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color18" class="circle color7"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color19" class="circle color8"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color20" class="circle color9"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color21" class="circle color10"></span>
+                            </div>
+
+                            <div class="circle-wrap">
+                                <span id="color22" class="circle color11"></span>
                             </div>
                         </div>
-            
-                    </div> <!--select wrapper-->
-                </div>
-            </form>
-        </div> <!--wrapper-->
+                    </div>
 
-    </div> <!--modal-content-->
-</div> <!--window-->
+                </div> <!--/select type-->
+
+                <div class="select__selected">
+                    <div class="select__picture">
+                        <img class="select__edge" src="./images/carpet-select/edging/1.png" alt="">
+                        <img class="select__image" src="./images/carpet-select/mainColor/1.png" alt="">
+                        <img class="select__numbers" src="./images/carpet-select/select-numbers.png" alt="">
+                    </div>
+                </div>
+
+            </div> <!--select wrapper-->
+        </div> <!--select-->
+
+        <div class="modal__container">
+            <button id="closeBtn" type="button" class="submit submit--red">Відміна</button>
+        </div>
+
+    </div>
+</div>
 
 
 
@@ -489,8 +498,10 @@
 </footer> 
 
 
+<script src="./scripts/jquery-3.4.1.min.js"></script>
 <script src="./scripts/materialize.min.js"></script>
 <script src="../src/scripts/main.js"></script>
+<script src="./scripts/jquery.mask.min.js"></script>
 <script src="https://kit.fontawesome.com/05e40f5d54.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 10;
     transition: .3s;
     @media (max-width: $breakpoint-tablet) {
         position: fixed;

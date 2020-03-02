@@ -10,6 +10,15 @@ function validation() {
 
     errorMessage.style.padding = '10px';
 
+        
+    sendBtn.onclick = function() {
+        text = 'Ваш запит було відправлено';
+        errorMessage.style.display = 'none';
+        successMessage.style.padding = '10px';
+        successMessage.innerHTML = text;
+        return false;
+    }
+
     if(name.length < 2) {
         text = "Будь ласка, введіть правильне Ім'я";
         errorMessage.innerHTML = text;
@@ -20,14 +29,9 @@ function validation() {
         text = 'Будь ласка, введіть правильний номер';
         errorMessage.innerHTML = text;
         return false;
-    }
-    sendBtn.onclick = function() {
-        text = 'Ваш запит було відправлено';
-        errorMessage.style.display = 'none';
-        successMessage.style.padding = '10px';
-        successMessage.innerHTML = text;
+    } else {
         return true;
-    }
+    };
 }
 
 /////////// modal //////////////

@@ -30,7 +30,6 @@
 </head>
 <body>
 
-<!--header + main nav + social links-->
 <div id="header" class="header">
     <div class="container">
         <div class="header__inner">
@@ -50,7 +49,7 @@
 
                 <div class="nav__bottom">
                     <div class="nav__ref">
-                        <a id="myBtn2">
+                        <a id="openModal2">
                             <img src="./images/icons/phone.png" alt="">
                             <p>Замовити</p>
                         </a>
@@ -70,10 +69,10 @@
                 </div>
 
                 <ul class="nav__links">
-                    <li class="nav__link"><a id="myBtn1">Замовити</a></li>
+                    <li class="nav__link"><a id="openModal1">Замовити</a></li>
                     <li class="nav__link"><a href="#about">Про нас</a></li>
 
-                    <div class="header__logo">
+                    <div class="header__logo header__logo--hidden">
                         <a href="#">
                             <img src="./images/logo/EvaCraft.png" alt="">
                         </a>
@@ -83,7 +82,7 @@
                     <li class="nav__link"><a href="#contacts">Контакти</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> <!--/header__inner-->
     </div>
 </div> <!--/header-->
 
@@ -120,7 +119,9 @@
     </div>
 </div>
 
-<button id="myBtn" class="button__submit">Login</button>
+<div id="openModal" class="button__submit-wrap">
+    <button class="button__submit">Замовити<br /> дзвінок</button>
+</div>
   
 <div id="myModal" class="modal">
     <div class="modal__content zoom">
@@ -280,11 +281,11 @@
         </div> <!--select-->
 
         <div class="modal__container">
-            <button id="closeBtn" type="button" class="submit submit--red">Відміна</button>
+            <button id="closeBtn" type="button" class="submit submit--red">Закрити</button>
         </div>
 
-    </div>
-</div>
+    </div> <!--modal content-->
+</div> <!--modal-->
 
 
 
@@ -308,7 +309,7 @@
                 <h1>Оригинальный EVA</h1>
                 <p>Мы используем только качественный материал – Этиленвинилацетат заводской полимеризации</p>
             </div>
-        </div>
+        </div> <!--about advantages-->
 
         <div class="about__row about__row--reverse">
 
@@ -400,6 +401,7 @@
 
     <div class="container">
         <div class="contacts__data">
+
             <div class="contacts__info">
                 <h1>Контакти</h1>
                 <h2>EvaCraft килими для автомобілів на замовлення</h2>
@@ -408,7 +410,8 @@
                 <p>+7(978) 120-05-62</p>
                 <h2>Email:</h2>
                 <p>evacraft@gmail.com</p>
-            </div>
+            </div> <!--contacts info-->
+
             <div class="contacts__info">
                 <h1>Про нас</h1>
                 <h2>Дізнатися про нас більше можна за посиланнями нижче:</h2>
@@ -433,7 +436,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> <!--contacts info-->
 
             <div class="contacts__info">
                 <h1>Графік роботи</h1>
@@ -457,10 +460,11 @@
                         <p>10:00 - 18:00</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> <!--contacts info-->
+
+        </div> <!--contacts data-->
     </div>
-</div>
+</div> <!--contacts-->
 
 <a id="up-button" class="up__button" href="#"><i class="fas fa-arrow-up"></i></a>
 
@@ -494,12 +498,13 @@
         <div class="copyright__wrapper">
             <p>&copy; Made by le Andrew & le Timur</p>
         </div>
-    </div>
-</footer> 
+    </div> <!--footer wrapper-->
+</footer> <!--footer-->
 
 
 <script src="./scripts/jquery-3.4.1.min.js"></script>
 <script src="./scripts/materialize.min.js"></script>
+<script src="../src/scripts/modal.js"></script>
 <script src="../src/scripts/main.js"></script>
 <script src="./scripts/jquery.mask.min.js"></script>
 <script src="https://kit.fontawesome.com/05e40f5d54.js" crossorigin="anonymous"></script>

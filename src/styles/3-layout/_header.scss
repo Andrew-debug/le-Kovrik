@@ -25,12 +25,17 @@
                 height: 100%;
             }
         }
+        &--hidden {
+            @media screen and (max-width: $breakpoint-tablet) {
+                display: none;
+            }
+        }
     }
     &__mobile {
         display: none;
-        width: 246px;
-        height: 44px;
-        margin: 1rem;
+        width: 200px;
+        height: 36px;
+        margin: .5rem;
         @media screen and (max-width: $breakpoint-tablet) {
             display: block;
         }

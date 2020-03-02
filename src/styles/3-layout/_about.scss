@@ -39,6 +39,14 @@
         @media screen and (max-height:414px) {
             font-size: .7rem;
         }
+        h1 {
+            font-family: $gordita-medium;
+            font-size: 1.1rem;
+            padding: .5rem 0;
+        }
+        p {
+            font-size: .8rem;
+        }
         img {
             margin: 20px 0;
             width: 44px;

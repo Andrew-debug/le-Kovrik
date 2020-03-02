@@ -1,8 +1,3 @@
-
-
-
-
-
 .carousel {
     overflow: hidden;
     position: relative;
@@ -14,67 +9,67 @@
             transform-style: preserve-3d;
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-  }
-  
-  .carousel.carousel-slider {
+}
+
+.carousel.carousel-slider {
     top: 0;
     left: 0;
-  }
-  
-  .carousel.carousel-slider .carousel-fixed-item {
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 20px;
     z-index: 1;
-  }
-  
-  .carousel.carousel-slider .carousel-fixed-item.with-indicators {
+}
+
+.carousel.carousel-slider .carousel-fixed-item.with-indicators {
     bottom: 68px;
-  }
-  
-  .carousel.carousel-slider .carousel-item {
+}
+
+.carousel.carousel-slider .carousel-item {
     width: 100%;
     height: 100%;
     min-height: 400px;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .carousel.carousel-slider .carousel-item h2 {
+}
+
+.carousel.carousel-slider .carousel-item h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
-  }
-  
-  .carousel.carousel-slider .carousel-item p {
+}
+
+.carousel.carousel-slider .carousel-item p {
     font-size: 15px;
-  }
-  
-  .carousel .carousel-item {
+}
+
+.carousel .carousel-item {
     visibility: hidden;
     width: 400px;
     height: 300px;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .carousel .carousel-item > img {
+}
+
+.carousel .carousel-item > img {
     width: 100%;
-  }
-  
-  .carousel .indicators {
+}
+
+.carousel .indicators {
     position: absolute;
     text-align: center;
     left: 0;
     right: 0;
     bottom: 0;
     margin: 0;
-  }
-  
-  .carousel .indicators .indicator-item {
+}
+
+.carousel .indicators .indicator-item {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -85,104 +80,43 @@
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     border-radius: 50%;
-  }
-  
-  .carousel .indicators .indicator-item.active {
+}
+
+.carousel .indicators .indicator-item.active {
     background-color: #fff;
-  }
-  
-  .carousel.scrolling .carousel-item .materialboxed,
-  .carousel .carousel-item:not(.active) .materialboxed {
+}
+
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
     pointer-events: none;
-  }
-
-
-// .modal1 {
-//     display: none; /* Hidden by default */
-//     position: fixed; /* Stay in place */
-//     z-index: 1; /* Sit on top */
-//     padding-top: 100px; /* Location of the box */
-//     left: 0;
-//     top: 0;
-//     width: 100%; /* Full width */
-//     height: 100%; /* Full height */
-//     overflow: auto; /* Enable scroll if needed */
-//     background-color: rgb(0,0,0); /* Fallback color */
-//     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-// }
-
-// .modal-content1 {
-//     margin: auto;
-//     display: block;
-//     width: 80%;
-//     max-width: 700px;
-// }
-
-// .close1 {
-//     position: absolute;
-//     top: 15px;
-//     right: 35px;
-//     color: #f1f1f1;
-//     font-size: 40px;
-//     font-weight: bold;
-// }
-
-// @media only screen and (max-width: 700px){
-//     .modal-content1 {
-//         width: 100%;
-//     }
-// }
-
-// #myImg1 {
-//     border-radius: 5px;
-//     cursor: pointer;
-// }
-
-// #myImg1:hover {opacity: 0.7;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 //video properties
 
 .video {
     width: 100%;
-}
-.video__wrap {
-    width: 100%;
-    max-width: 800px;
-    min-height: 450px;
-    margin: 0 auto;
-    @media (max-width: $breakpoint-mobile) {
-        min-height: unset;
+    &__wrap {
+        width: 100%;
+        max-width: 800px;
+        min-height: 450px;
+        margin: 0 auto;
+        @media (max-width: $breakpoint-mobile) {
+            min-height: unset;
+        }
     }
 }
 
-.iframe-container{
+.iframe-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; 
     height: 0;
-}
-
-.iframe-container iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 }

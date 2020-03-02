@@ -36,6 +36,7 @@ let modal = document.getElementById('myModal');
 let btn = document.getElementById('openModal');
 let btn1 = document.getElementById('openModal1');
 let btn2 = document.getElementById('openModal2');
+let btn3 = document.getElementById('openModal3');
 let closeBtn = document.getElementById('closeBtn');
 let closeBtn1 = document.getElementById('closeBtn1');
 let body = document.querySelector('body');
@@ -52,6 +53,10 @@ btn2.onclick = function() {
     modal.style.display = 'block';
     body.classList.toggle('active');
 }
+btn3.onclick = function() {
+    modal.style.display = 'block';
+    body.classList.toggle('active');
+}
 closeBtn.onclick = function() {
     modal.style.display = 'none';
     body.classList.remove('active')
@@ -59,6 +64,37 @@ closeBtn.onclick = function() {
 closeBtn1.onclick = function() {
     modal.style.display = 'none';
     body.classList.remove('active')
+}
+
+//////////(.select tab) /////////
+
+function chooseColor(evt, color) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName('tab__content');
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none';
+    }
+
+    tablinks = document.getElementsByClassName('tab__links');
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' tab__links--active', '');
+    }
+
+    document.getElementById(color).style.display = 'block';
+    evt.currentTarget.className += ' tab__links--active';
+}
+
+/////////// close select section /////////////
+function myFunction() {
+    let checkBox = document.getElementById('myCheck');
+    let text = document.getElementById('closed');
+  
+    if (checkBox.checked == true){
+      text.style.display = 'block';
+    } else {
+      text.style.display = 'none';
+    }
 }
 
 ////// send request ///////

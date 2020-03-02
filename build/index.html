@@ -14,8 +14,6 @@
           коврик авто,
           коврик багажник,
           коврик машина">
-    <meta itemprop="name" content="Автоковрики EVA">
-    <meta itemprop="description" content="EVA Коврики для автомобилей с доставкой по всему Крыму | Собственное производство ковриков eva">
     <meta name="og:title" content="Автоковрики EVA">
     <meta name="og:description" content="EVA Коврики для автомобилей с доставкой по всему Крыму | Собственное производство ковриков eva">
     <meta name="og:image" content="http://evacraft.ru/images/main_slider_bg.jpg">
@@ -72,15 +70,16 @@
                     <li class="nav__link"><a id="openModal1">Замовити</a></li>
                     <li class="nav__link"><a href="#about">Про нас</a></li>
 
-                    <div class="header__logo header__logo--hidden">
+                    <li class="header__logo header__logo--hidden">
                         <a href="#">
                             <img src="./images/logo/EvaCraft.png" alt="">
                         </a>
-                    </div>
+                    </li>
 
                     <li class="nav__link"><a href="#video">Відео</a></li>
                     <li class="nav__link"><a href="#contacts">Контакти</a></li>
                 </ul>
+
             </nav>
         </div> <!--/header__inner-->
     </div>
@@ -90,31 +89,32 @@
     <div class="intro__inner">
         <h1 class="intro__title">Eva килими з полімеру на Ваш вибір</h1>
         <a href="#about" class="intro__button">Дізнатися більше</a>
+        <a id="openModal3" class="intro__button intro__button--padding">Переглянути кольори</a>
     </div>
 
     <a class="intro__forward" href="#slider">
         <img src="./images/logo/ec.png" alt="">
-        <div class="intro__hidden">Move Forward</div>
+        <div lang="en" class="intro__hidden">Move Forward</div>
     </a>
 </div> 
 
 
 <div id="slider" class="carousel">
-    <a class="carousel-item"><img src="./images/slider/1.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/2.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/3.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/4.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/6.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/7.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/8.jpg"></a>
-    <a class="carousel-item"><img src="./images/slider/9.jpg"></a>
+    <a class="carousel-item"><img src="./images/slider/1.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/2.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/3.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/4.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/6.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/7.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/8.jpg" alt="eva"></a>
+    <a class="carousel-item"><img src="./images/slider/9.jpg" alt="eva"></a>
 </div>
 
 
 <div id="video" class="video">
     <div class="video__wrap">
         <div class="iframe-container">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/MVllxXzJ9Wc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/MVllxXzJ9Wc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </div>
@@ -137,7 +137,7 @@
         <div id="error-message"></div>
         <div id="success-message"></div>
 
-        <form id="myform" class="color-select" method="post" action="" onsubmit="return validation()">
+        <form id="myform" class="color-select" method="post" onsubmit="return validation()">
             <div class="modal__section">
                 <label>Ім'я</label>
                 <input id="name" class="modal__input" type="text" placeholder="Введіть Ваше ім'я" name="name" maxlength="40" required>
@@ -165,8 +165,8 @@
                 <div class="select__type">
 
                     <div class="tab">
-                        <button class="tab__links tab__links--active" onclick="chooseColor(event, 'innerColor')">Колір килима</button>
-                        <button class="tab__links" onclick="chooseColor(event, 'edgesColor')">Колір окантовки</button>
+                        <button class="tab__links tab__links--active" onclick="chooseColor(event, 'innerColor')">Колір <br /> килима</button>
+                        <button class="tab__links" onclick="chooseColor(event, 'edgesColor')">Колір <br /> окантовки</button>
                     </div>
                     
                     <div id="innerColor" class="tab__content tab__content--open">
@@ -291,7 +291,7 @@
 
 <div id="about" class="about">
     <div class="container">
-        <h1 class="about__title">Килими EVA CRAFT виготовляються із екополімеру ETHYLENE-VINYL ACETATE (EVA)</h1>
+        <h1 lang="en" class="about__title">Килими EVA CRAFT виготовляються із екополімеру ETHYLENE-VINYL ACETATE (EVA)</h1>
 
         <div class="about__advantages">
             <div class="about__why">
@@ -318,8 +318,8 @@
             </div>  
 
             <div class="about__text">
-                <h2>Blooger</h2>
-                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>
         </div> <!-- about__row -->
 
@@ -329,8 +329,8 @@
             </div>    
 
             <div class="about__text">
-                <h2>Active Box</h2>
-                <p>This is my very first project. Was build with the help of a tutorial for beginners about building a website with HTML, CSS and jQuery. Very useful experience especially working with jQuery.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>   
         </div> <!-- about_row -->
 
@@ -341,8 +341,8 @@
             </div>  
 
             <div class="about__text">
-                <h2>Blooger</h2>
-                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>
         </div> <!-- about__row -->
 
@@ -352,8 +352,8 @@
             </div>    
 
             <div class="about__text">
-                <h2>Active Box</h2>
-                <p>This is my very first project. Was build with the help of a tutorial for beginners about building a website with HTML, CSS and jQuery. Very useful experience especially working with jQuery.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>   
         </div> <!-- about_row -->
 
@@ -364,8 +364,8 @@
             </div>  
 
             <div class="about__text">
-                <h2>Blooger</h2>
-                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>
         </div> <!-- about__row -->
 
@@ -375,8 +375,8 @@
             </div>    
 
             <div class="about__text">
-                <h2>Active Box</h2>
-                <p>This is my very first project. Was build with the help of a tutorial for beginners about building a website with HTML, CSS and jQuery. Very useful experience especially working with jQuery.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>   
         </div> <!-- about_row -->
 
@@ -387,8 +387,8 @@
             </div>  
 
             <div class="about__text">
-                <h2>Blooger</h2>
-                <p>This is one of my first projects. Looks preety good and simple. Good practise for beginners.</p>
+                <h2>Кека</h2>
+                <p>Заполнить текст.</p>
             </div>
         </div> <!-- about__row -->
 
@@ -496,7 +496,7 @@
             </li>
         </ul>
         <div class="copyright__wrapper">
-            <p>&copy; Made by le Andrew & le Timur</p>
+            <p lang="en">&copy; Made by Andrew & Timur</p>
         </div>
     </div> <!--footer wrapper-->
 </footer> <!--footer-->

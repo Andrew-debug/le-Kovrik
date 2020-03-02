@@ -39,15 +39,13 @@
     &__button {
         background-color: #03548E;
         color: $white;
-
         border: none;
         border-radius: 85px;
         cursor: pointer;
-        font-family: $gordita-regular;
-        font-size: 1.2rem;
-
-        padding: .8rem 4rem;
         text-align: center;
+        font-family: $gordita-regular;
+        font-size: 1rem;
+        padding: .5rem 3rem;
         line-height: 3.2rem;
         @media screen and (max-width: $breakpoint-mobile) {
             padding: .5rem 1.5rem;
@@ -56,6 +54,9 @@
         @media screen and (max-height:414px) {
             padding: .5rem 1.5rem;
             font-size: .7rem;
+        }
+        &--padding {
+            padding: .5rem 1.9rem;
         }
         &:hover {
             background-color: lighten($introbtn, 5%);

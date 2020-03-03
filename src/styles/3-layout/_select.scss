@@ -242,9 +242,9 @@
     display: inline-block;
     width: 25px;
     height: 25px;
-    border: 1px solid $black;
+    border: 1px solid rgba(0, 0, 0, .5);
     border-radius: 50%;
-
+    cursor: pointer;
 }
 
 .color-select__title {
